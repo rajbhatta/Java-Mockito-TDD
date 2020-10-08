@@ -34,9 +34,9 @@ class AccountServiceTest {
   @Test
   public void shouldOpenAccount() throws IOException {
 
-    // This return will direct us to the else condition
+    // This return will direct us to the else condition because we are returning string here which will pass else condition.
     when(backgroundCheckService.confirm(NAME, LAST_NAME, TAX_ID, OPENDED_DATE))
-        .thenReturn(new BackgroundCheckResults(anyString(), 100));
+        .thenReturn(new BackgroundCheckResults("test", 100));
 
     when(referenceIdsManager.obtainId(NAME, LAST_NAME, TAX_ID, OPENDED_DATE)).thenReturn("some_id");
 
