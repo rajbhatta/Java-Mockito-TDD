@@ -1,4 +1,6 @@
-## Junit test without Mockito ##
+## Unit test without Mockito ##
+Let us consider we do have class as given below:
+
 ```java
 package raj.mockito.revise;
 
@@ -44,6 +46,7 @@ public class AccountService {
     }
 }
 ```
+Then we are writing unit test without using Mockito as given below:
 
 ```java
 package raj.mockito.revise;
@@ -76,8 +79,8 @@ class AccountServiceTest {
 ```
 
 ### Problems ###
-<src img="error1.png"/>
-According to above error, we are getting null from 
+<img src="error1.png"/>
+According to above error, we are getting null from because we passed in null inside constructor.
 
 ```java
  final BackgroundCheckResults backgroundCheckResults = backgroundCheckService.confirm(firstName,
