@@ -87,3 +87,8 @@ class AccountServiceTest {
 <img src="img/error2.png" />
 
 This time our test is still failing but we are not getting nullpointer exception anymore.
+
+
+### Notes ###
+- Mockito can mock a class
+- Mocktio can mock an interface
