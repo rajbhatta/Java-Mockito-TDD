@@ -269,16 +269,14 @@ class AccountServiceTest {
     final String UNACCEPTABLE_RISK_PROFILE = "HIGH";
 
     // Let's add method subbing
-    when(backgroundCheckService.confirm("Raj", "Bhatta", "1234", LocalDate.of(2020, 10, 2)))
+    when(backgroundCheckService.confirm(NAME, LAST_NAME, TAX_ID, OPENDED_DATE))
         .thenReturn(new BackgroundCheckResults(UNACCEPTABLE_RISK_PROFILE, 0));
 
     final AccountOpeningStatus accountOpeningStatus =
-        underTest.openAccount("Raj", "Bhatta", "1234", LocalDate.of(2020, 10, 2));
+        underTest.openAccount(NAME, LAST_NAME, TAX_ID, OPENDED_DATE);
     assertEquals(AccountOpeningStatus.DECLINED, accountOpeningStatus);
   }
 
-    
-  // This is newly added section for null check
   @Test
   public void checkNullBackgroundCheck() throws IOException {
 
