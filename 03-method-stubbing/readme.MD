@@ -106,5 +106,4 @@ class AccountServiceTest {
 ### Result ###
 <img src="img/pass1.png" />
 
-This time our test is still failing but we are not getting nullpointer exception anymore.
 
