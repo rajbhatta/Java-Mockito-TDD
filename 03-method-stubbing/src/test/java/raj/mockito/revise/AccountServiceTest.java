@@ -41,7 +41,7 @@ class AccountServiceTest {
     when(referenceIdsManager.obtainId(NAME, LAST_NAME, TAX_ID, OPENDED_DATE)).thenReturn("some_id");
 
     final AccountOpeningStatus accountOpeningStatus =
-        underTest.openAccount("Raj", "Bhatta", "123", LocalDate.of(2020, 10, 10));
+        underTest.openAccount(NAME, LAST_NAME, TAX_ID, OPENDED_DATE);
     assertEquals(AccountOpeningStatus.OPENED, accountOpeningStatus);
   }
 
