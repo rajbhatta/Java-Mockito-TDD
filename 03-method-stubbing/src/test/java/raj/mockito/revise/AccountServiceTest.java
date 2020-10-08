@@ -58,4 +58,17 @@ class AccountServiceTest {
         underTest.openAccount("Raj", "Bhatta", "1234", LocalDate.of(2020, 10, 2));
     assertEquals(AccountOpeningStatus.DECLINED, accountOpeningStatus);
   }
+
+  @Test
+  public void checkNullBackgroundCheck() throws IOException {
+
+    // when background check method is called return null.
+    when(backgroundCheckService.confirm(NAME, LAST_NAME, TAX_ID, OPENDED_DATE))
+            .thenReturn(null);
+
+    final AccountOpeningStatus accountOpeningStatus =
+            underTest.openAccount(NAME, LAST_NAME, TAX_ID, OPENDED_DATE);
+    assertEquals(AccountOpeningStatus.DECLINED, accountOpeningStatus);
+
+  }
 }
