@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="private-pension-provider" target="10" />
+      <module name="private-pension-provider" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
